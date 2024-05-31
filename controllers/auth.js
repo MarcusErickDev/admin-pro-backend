@@ -21,7 +21,7 @@ const login = async ( req, res = response ) => {
     }
 
     // Generar web Token - JWT
-    const token = await generarJWT( usuarioDB.id )
+    const token = await generarJWT( usuarioDB.id );
 
     // Verificar contraseña
     const validPassword = bcrypt.compareSync( password, usuarioDB.password );
